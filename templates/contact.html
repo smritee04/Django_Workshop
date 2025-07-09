@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Smriti</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+
+<body class="pt-24 bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white fixed top-0 w-full z-50 border-b border-gray-200 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="{% static 'image/django.png' %}" alt="Logo" class="w-10 h-10 rounded-full object-cover" />
+        <h1 class="text-3xl font-bold text-blue-600 tracking-wider">Smriti</h1>
+      </div>
+      <nav class="hidden md:flex space-x-8 text-lg font-medium">
+        <a href="#home" class="hover:text-blue-600 transition">Home</a>
+        <a href="#about" class="hover:text-blue-600 transition">About</a>
+        <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+        <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+        <a href="#contact" class="hover:text-blue-600 transition font-semibold text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-gray-100">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-blue-600 mb-6">Contact Me</h2>
+      <p class="text-gray-600 mb-8">
+        I’m available for freelance, internship, or collaboration.<br />Let’s build something great!
+      </p>
+      <form class="space-y-4 bg-white p-8 rounded-xl shadow-md">
+        <input type="text" placeholder="Your Name"
+          class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <input type="email" placeholder="Your Email"
+          class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <textarea placeholder="Your Message" rows="4"
+          class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <button type="submit"
+          class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition shadow">
+          Send
+        </button>
+      </form>
+    </div>
+  </section>
+  {{employee}}
+</body>
+</html>

@@ -1,9 +1,16 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from employee.models import Employee
+
 def home(request):
     return render(request,"home.html")
 
  
 def contact(request):
-    return HttpResponse("Hello from Contact!")
+    employee = Employee.objects.all()
+    context = {
+        "employee": employee
+    }
+    print("data from view",employee)
+    return render (request,"contact.html",context)

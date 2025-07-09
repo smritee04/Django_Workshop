@@ -9,3 +9,5 @@ class Employee(models.Model):
     phone_number=models.CharField(max_length=12,blank=True)
     image=models.ImageField(upload_to='images')
 
+def _str_(self):
+    return self.first_name
