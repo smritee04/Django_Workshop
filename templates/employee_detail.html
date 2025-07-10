@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Smriti</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="pt-24 bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white fixed top-0 w-full z-50 border-b border-gray-200 shadow-lg">
+    <div class="max-w-7xl mx-auto px-2 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="{% static 'image/django.png' %}" alt="Logo" class="w-10 h-10 rounded-full object-cover" />
+        <h1 class="text-3xl font-bold text-blue-600 tracking-wider">Smriti</h1>
+      </div>
+      <nav class="hidden md:flex space-x-8 text-lg font-medium">
+        <a href="#home" class="hover:text-blue-600 transition">Home</a>
+        <a href="#about" class="hover:text-blue-600 transition">About</a>
+        <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+        <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+        <a href="{% url 'contact' %}" class="hover:text-blue-600 transition font-semibold text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="max-w-3xl mx-auto mt-20 p-6 bg-white rounded-lg shadow-md">
+    <div class="border rounded-md overflow-hidden shadow-md shadow-black/50 p-6 flex flex-col items-center text-center">
+     
+      <img src="{{ employee.image.url }}" alt="Employee Image" class="w-52 h-52 object-cover rounded-full shadow-lg mb-6" />
+     
+      <div class="text-xs font-medium space-y-4">
+        <div>
+          <span class="font-semibold">Name: </span>
+          <span>{{ employee.first_name }} {{ employee.last_name }}</span>
+        </div>
+        <div>
+          <span class="font-semibold">Email: </span>
+          <span>{{ employee.email }}</span>
+        </div>
+        <div>
+          <span class="font-semibold">Phone Number: </span>
+          <span>{{ employee.phone_number }}</span>
+        </div>
+      </div>
+    </div>
+   
+    <div class="text-center mt-6">
+      <a href="{% url 'home' %}" class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+        Go back
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -7,6 +7,7 @@ class Employee(models.Model):
     last_name=models.CharField(max_length=100)
     email=models.EmailField(max_length=100,unique=True)
     phone_number=models.CharField(max_length=12,blank=True)
+    
     image=models.ImageField(upload_to='images')
 
 def _str_(self):
