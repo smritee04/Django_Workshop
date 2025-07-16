@@ -7,18 +7,18 @@
   <title>Smriti | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Custom Tailwind Theme -->
+  <!-- Custom Tailwind Dark Code Theme -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: '#00bcd4',  
-            soft: '#a78bfa',     
-            light: '#f0f9ff',     
-            lightgray: '#e0f2fe', 
-            card: '#dbeafe',      
-            text: '#1e293b'       
+            primary: '#00d1b2',  // teal (like VS Code accent)
+            bg: '#0f172a',       // slate-900 (dark background)
+            card: '#1e293b',     // slate-800 (card background)
+            text: '#e2e8f0',     // slate-200 (light text)
+            soft: '#38bdf8',     // sky-400
+            border: '#334155',   // slate-700
           }
         }
       }
@@ -26,14 +26,14 @@
   </script>
 </head>
 
-<body class="bg-light text-text font-sans scroll-smooth">
+<body class="bg-bg text-text font-mono scroll-smooth">
 
   <!-- Navbar -->
-  <header class="bg-light fixed top-0 w-full z-50 border-b border-primary shadow-lg">
+  <header class="bg-bg fixed top-0 w-full z-50 border-b border-border shadow">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       <div class="flex items-center space-x-3">
         <img src="{% static 'image/django.png' %}" alt="Logo" class="w-10 h-10 rounded-full object-cover" />
-        <h1 class="text-3xl font-bold text-primary tracking-wider">Smriti</h1>
+        <h1 class="text-3xl font-bold text-primary tracking-widest">Smriti</h1>
       </div>
       <nav class="hidden md:flex space-x-8 text-lg font-medium">
         <a href="#home" class="hover:text-primary transition">Home</a>
@@ -46,16 +46,15 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-32 bg-gradient-to-r from-light via-lightgray to-light">
+  <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-32 bg-gradient-to-r from-bg via-card to-bg">
     <div class="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
-      <!-- Text -->
       <div class="space-y-5 md:w-1/2">
         <h1 class="text-5xl font-extrabold leading-tight">
           Hello, I'm <span class="text-primary">Smriti</span>
         </h1>
         <h2 class="text-2xl text-soft font-medium">Frontend Developer</h2>
-        <p class="text-gray-600">I create elegant and responsive websites using Tailwind CSS and Django. Based in Pokhara, I design with heart and code with logic.</p>
-        <a href="#contact" class="inline-block mt-4 bg-primary hover:bg-sky-500 text-white px-6 py-3 rounded-full transition duration-300 shadow-md">Hire Me</a>
+        <p class="text-slate-400">I create elegant and responsive websites using Tailwind CSS and Django. Based in Pokhara, I design with heart and code with logic.</p>
+        <a href="#contact" class="inline-block mt-4 bg-primary hover:bg-teal-400 text-bg px-6 py-3 rounded-full transition duration-300 shadow-md">Hire Me</a>
       </div>
 
       <!-- Profile Image -->
@@ -68,59 +67,59 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-20 px-6 bg-lightgray">
+  <section id="projects" class="py-20 px-6 bg-card">
     <div class="max-w-7xl mx-auto text-center">
       <h2 class="text-4xl font-bold text-primary mb-10">Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-card p-6 rounded-xl shadow hover:shadow-primary transition">
+        <div class="bg-bg p-6 rounded-xl shadow hover:shadow-lg border border-border transition">
           <h3 class="text-xl font-semibold mb-2 text-soft">Weather App</h3>
-          <p class="text-gray-600">Real-time weather app using Java & OpenWeather API.</p>
+          <p class="text-slate-400">Real-time weather app using Java & OpenWeather API.</p>
         </div>
-        <div class="bg-card p-6 rounded-xl shadow hover:shadow-primary transition">
+        <div class="bg-bg p-6 rounded-xl shadow hover:shadow-lg border border-border transition">
           <h3 class="text-xl font-semibold mb-2 text-soft">Mitho Koseli</h3>
-          <p class="text-gray-600">Online gift shop built with PHP, MySQL and eSewa payment integration.</p>
+          <p class="text-slate-400">Online gift shop built with PHP, MySQL and eSewa payment integration.</p>
         </div>
-        <div class="bg-card p-6 rounded-xl shadow hover:shadow-primary transition">
+        <div class="bg-bg p-6 rounded-xl shadow hover:shadow-lg border border-border transition">
           <h3 class="text-xl font-semibold mb-2 text-soft">Website for ABC Trek</h3>
-          <p class="text-gray-600">This website using HTML, CSS, PHP, fully responsive.</p>
+          <p class="text-slate-400">This website uses HTML, CSS, and PHP and is fully responsive.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="py-20 px-6 bg-light">
+  <section id="skills" class="py-20 px-6 bg-bg">
     <div class="max-w-7xl mx-auto text-center">
       <h2 class="text-4xl font-bold text-primary mb-10">Skills</h2>
-      <div class="flex flex-wrap justify-center gap-6">
-        <span class="bg-soft px-4 py-2 rounded-full text-white">HTML</span>
-        <span class="bg-soft px-4 py-2 rounded-full text-white">CSS</span>
-        <span class="bg-soft px-4 py-2 rounded-full text-white">JavaScript</span>
-        <span class="bg-soft px-4 py-2 rounded-full text-white">Tailwind</span>
-        <span class="bg-soft px-4 py-2 rounded-full text-white">Django</span>
-        <span class="bg-soft px-4 py-2 rounded-full text-white">PHP</span>
-        <span class="bg-soft px-4 py-2 rounded-full text-white">MySQL</span>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="bg-soft text-bg px-4 py-2 rounded-full">HTML</span>
+        <span class="bg-soft text-bg px-4 py-2 rounded-full">CSS</span>
+        <span class="bg-soft text-bg px-4 py-2 rounded-full">JavaScript</span>
+        <span class="bg-soft text-bg px-4 py-2 rounded-full">Tailwind</span>
+        <span class="bg-soft text-bg px-4 py-2 rounded-full">Django</span>
+        <span class="bg-soft text-bg px-4 py-2 rounded-full">PHP</span>
+        <span class="bg-soft text-bg px-4 py-2 rounded-full">MySQL</span>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 px-6 bg-lightgray">
+  <section id="contact" class="py-20 px-6 bg-card">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-4xl font-bold text-primary mb-6">Contact Me</h2>
-      <p class="text-gray-600 mb-6">I’m available for freelance, internship, or collaboration. Let’s build something great!</p>
+      <p class="text-slate-400 mb-6">I’m available for freelance, internship, or collaboration. Let’s build something great!</p>
       <form class="space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded bg-white text-text border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" />
-        <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded bg-white text-text border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" />
-        <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-3 rounded bg-white text-text border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
-        <button type="submit" class="bg-primary hover:bg-sky-500 text-white px-6 py-3 rounded-full transition shadow">Send</button>
+        <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded bg-bg text-text border border-border focus:outline-none focus:ring-2 focus:ring-primary" />
+        <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded bg-bg text-text border border-border focus:outline-none focus:ring-2 focus:ring-primary" />
+        <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-3 rounded bg-bg text-text border border-border focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+        <button type="submit" class="bg-primary hover:bg-teal-400 text-bg px-6 py-3 rounded-full transition shadow">Send</button>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center text-gray-500 py-6 bg-light">
-    &copy; 2025 Smriti Giri. Designed with 💖 in Pokhara.
+  <footer class="text-center text-slate-500 py-6 bg-bg border-t border-border">
+    &copy; 2025 Smriti Giri. Designed with 💻 in Pokhara.
   </footer>
 
 </body>
